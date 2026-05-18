@@ -13,6 +13,7 @@ import java.time.LocalDateTime;
 @Component
 public class UserMapper {
 
+    // D'Entity a DTO
     public UserResponseDTO toDto(User user) {
 
         if (user == null) return null;
@@ -40,6 +41,7 @@ public class UserMapper {
         return dto;
     }
 
+    // De DTO a Entity
     public User toEntity(UserRequestDTO request) {
 
         if (request == null) return null;
