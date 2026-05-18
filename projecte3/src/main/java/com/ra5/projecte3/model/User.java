@@ -1,4 +1,4 @@
-package com.projecte3.model;
+package com.ra5.projecte3.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

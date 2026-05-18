@@ -1,8 +1,9 @@
-package com.projecte3.repository;
+package com.ra5.projecte3.repository;
 
-import com.projecte3.model.User;
-import com.projecte3.model.Role;
 import org.springframework.data.mongodb.repository.MongoRepository;
+
+import com.ra5.projecte3.model.Role;
+import com.ra5.projecte3.model.User;
 
 import java.util.List;
 import java.util.Optional;

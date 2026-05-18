@@ -1,6 +1,6 @@
-package com.projecte3.dto;
+package com.ra5.projecte3.dto;
 
-import com.projecte3.model.Role;
+import com.ra5.projecte3.model.Role;
 
 public class UserRequestDTO {
 

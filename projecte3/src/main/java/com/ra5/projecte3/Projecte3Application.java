@@ -1,4 +1,4 @@
-package com.projecte3;
+package com.ra5.projecte3;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

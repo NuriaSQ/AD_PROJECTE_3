@@ -1,4 +1,4 @@
-package com.projecte3.dto;
+package com.ra5.projecte3.dto;
 
 public class AcademicProfileDTO {
 

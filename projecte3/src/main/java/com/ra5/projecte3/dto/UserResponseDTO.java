@@ -1,8 +1,8 @@
-package com.projecte3.dto;
-
-import com.projecte3.model.Role;
+package com.ra5.projecte3.dto;
 
 import java.time.LocalDateTime;
+
+import com.ra5.projecte3.model.Role;
 
 public class UserResponseDTO {
 
