@@ -1,8 +1,10 @@
 package com.ra5.projecte3.controller;
 
+import com.ra5.projecte3.dto.UserRequestDTO;
 import com.ra5.projecte3.dto.UserResponseDTO;
 import com.ra5.projecte3.model.Role;
 import com.ra5.projecte3.service.UserService;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -55,5 +57,46 @@ public class UserController {
         }
 
         return ResponseEntity.ok(user);
+    }
+
+    // Crea un nou usuari
+    @PostMapping
+    public ResponseEntity<UserResponseDTO> create(@RequestBody UserRequestDTO request) {
+
+        UserResponseDTO createdUser = userService.create(request);
+
+        if (createdUser == null) {
+            return ResponseEntity.status(409).build();
+        }
+
+        return ResponseEntity.status(201).body(createdUser);
+    }
+
+    // Actualitza un usuari
+    @PutMapping("/{id}")
+    public ResponseEntity<UserResponseDTO> update(
+            @PathVariable String id,
+            @RequestBody UserRequestDTO request) {
+
+        UserResponseDTO updatedUser = userService.update(id, request);
+
+        if (updatedUser == null) {
+            return ResponseEntity.notFound().build();
+        }
+
+        return ResponseEntity.ok(updatedUser);
+    }
+
+    // Elimina un usuari
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable String id) {
+
+        boolean deleted = userService.delete(id);
+
+        if (!deleted) {
+            return ResponseEntity.notFound().build();
+        }
+
+        return ResponseEntity.noContent().build();
     }
 }
